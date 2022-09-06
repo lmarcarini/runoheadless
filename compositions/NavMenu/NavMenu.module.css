@@ -1,0 +1,24 @@
+.navmenu__list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+}
+.navmenu__links {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.3rem;
+  list-style-type: none;
+  font-family: Roboto, sans-serif;
+}
+.separator {
+  background-color: white;
+  width: 1px;
+  height: 20px;
+}
