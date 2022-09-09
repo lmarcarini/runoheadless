@@ -1,11 +1,14 @@
 import React from "react";
+import styles from "./BackgroundImage.module.css";
 
-type Props = {};
+type Props = {
+  src: string;
+};
 
-const BackgroundImage = (props: Props) => {
+const BackgroundImage = ({ src }: Props) => {
   return (
     <picture>
-      <img src="" alt="" />
+      <img src={src} alt="" className={styles["backgroundImage"]} />
     </picture>
   );
 };

@@ -1,0 +1,11 @@
+.backgroundImage {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
