@@ -1,4 +1,5 @@
 import BackgroundImage from "@components/BackgroundImage";
+import Badge from "@components/Badge";
 import React from "react";
 import styles from "./ArticleHeader.module.css";
 
@@ -18,7 +19,7 @@ const ArticleHeader = (props: Props) => {
   return (
     <section className={styles["articleHeader"]}>
       <BackgroundImage src="images/Rectangle 9.png" />
-      <div className={styles["articleHeader__type"]}>{article.type}</div>
+      <Badge>{article.type}</Badge>
       <h1 className={styles["articleHeader__title"]}>{article.title}</h1>
       <p className={styles["articleHeader__description"]}>
         {article.description}

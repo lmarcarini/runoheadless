@@ -1,0 +1,13 @@
+.subFooter {
+  background: #343a40;
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  color: #e5e5e5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 31px 70px;
+  justify-content: space-between;
+}

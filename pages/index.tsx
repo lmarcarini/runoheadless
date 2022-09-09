@@ -1,4 +1,5 @@
 import Article from "@sections/Article";
+import Footer from "@sections/Footer";
 import Header from "@sections/Header";
 import RelatedArticles from "@sections/RelatedArticles";
 import type { NextPage } from "next";
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <Article />
         <RelatedArticles />
       </main>
+      <Footer />
     </div>
   );
 };

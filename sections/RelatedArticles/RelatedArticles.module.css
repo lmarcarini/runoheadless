@@ -12,3 +12,7 @@
   line-height: 25px;
   color: #495057;
 }
+.list {
+  display: flex;
+  gap: 20px;
+}

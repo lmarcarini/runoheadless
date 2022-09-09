@@ -4,7 +4,7 @@ import styles from "./Badge.module.css";
 type Props = { children: string };
 
 const Badge = ({ children }: Props) => {
-  return <div className={styles.badge}>Badge</div>;
+  return <div className={styles.badge}>{children}</div>;
 };
 
 export default Badge;

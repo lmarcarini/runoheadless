@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 42px 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  height: 350px;
+  width: 420px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.card__header {
+  margin-left: auto;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.card__date {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #e5e5e5;
+}
+.card__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.card__description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #e5e5e5;
+}

@@ -7,7 +7,7 @@ type Props = {
 
 const BackgroundImage = ({ src }: Props) => {
   return (
-    <picture>
+    <picture className={styles["backgroundImage"]}>
       <img src={src} alt="" className={styles["backgroundImage"]} />
     </picture>
   );
