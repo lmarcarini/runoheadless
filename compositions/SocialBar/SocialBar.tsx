@@ -5,8 +5,7 @@ import {
   FacebookIcon,
   PinterestIcon,
   TwitterIcon,
-  YoutubeIcon,
-} from "../../components/Icons";
+} from "@components/Icons";
 import styles from "./SocialBar.module.css";
 
 type Props = {};

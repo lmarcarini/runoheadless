@@ -8,8 +8,8 @@ import {
   SearchIcon,
   TwitterIcon,
   YoutubeIcon,
-} from "../../components/Icons";
-import Logo from "../../components/Logo";
+} from "@components/Icons";
+import Logo from "@components/Logo";
 import styles from "./NavMenu.module.css";
 
 type Props = {};

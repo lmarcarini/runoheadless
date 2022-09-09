@@ -1,5 +1,5 @@
+import BackgroundImage from "@components/BackgroundImage";
 import React from "react";
-import BackgroundImage from "../../components/BackgroundImage";
 import styles from "./ArticleHeader.module.css";
 
 type Props = {};

@@ -1,9 +1,8 @@
+import AuthorInfo from "@components/AuthorInfo";
+import Tag from "@components/Tag";
+import SocialBar from "@compositions/SocialBar";
 import { Separator } from "@radix-ui/react-separator";
-import { triggerAsyncId } from "async_hooks";
 import React from "react";
-import AuthorInfo from "../../components/AuthorInfo";
-import Tag from "../../components/Tag";
-import SocialBar from "../SocialBar";
 import styles from "./ArticleBody.module.css";
 
 type Props = {};

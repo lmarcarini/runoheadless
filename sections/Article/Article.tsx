@@ -1,6 +1,7 @@
+import ArticleBody from "@compositions/ArticleBody";
+import ArticleHeader from "@compositions/ArticleHeader";
 import React from "react";
-import ArticleBody from "../../compositions/ArticleBody";
-import ArticleHeader from "../../compositions/ArticleHeader";
+
 import styles from "./Article.module.css";
 
 type Props = {};
