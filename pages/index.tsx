@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Article from "../sections/Article";
 import Header from "../sections/Header";
+import RelatedArticles from "../sections/RelatedArticles";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -15,7 +16,10 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <Article />
+      <main>
+        <Article />
+        <RelatedArticles />
+      </main>
     </div>
   );
 };

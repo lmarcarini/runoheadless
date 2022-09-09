@@ -47,15 +47,14 @@ const NavMenu = (props: Props) => {
                 <NavigationMenu.Link>Contact Us</NavigationMenu.Link>
               </Link>
             </NavigationMenu.Item>
-            <NavigationMenu.Item>
-              <Separator.Root
-                orientation="vertical"
-                className={styles["separator"]}
-              />
-            </NavigationMenu.Item>
+            <Separator.Root
+              orientation="vertical"
+              className={styles["separator"]}
+            />
+
             <NavigationMenu.Item>
               <Link href="/" passHref>
-                <NavigationMenu.Link>
+                <NavigationMenu.Link aria-label="facebook">
                   <FacebookIcon />
                 </NavigationMenu.Link>
               </Link>
@@ -69,34 +68,33 @@ const NavMenu = (props: Props) => {
             </NavigationMenu.Item>
             <NavigationMenu.Item>
               <Link href="/" passHref>
-                <NavigationMenu.Link>
+                <NavigationMenu.Link aria-label="youtube">
                   <YoutubeIcon />
                 </NavigationMenu.Link>
               </Link>
             </NavigationMenu.Item>
             <NavigationMenu.Item>
               <Link href="/" passHref>
-                <NavigationMenu.Link>
+                <NavigationMenu.Link aria-label="pinterest">
                   <PinterestIcon />
                 </NavigationMenu.Link>
               </Link>
             </NavigationMenu.Item>
             <NavigationMenu.Item>
               <Link href="/" passHref>
-                <NavigationMenu.Link>
+                <NavigationMenu.Link aria-label="behance">
                   <BehanceIcon />
                 </NavigationMenu.Link>
               </Link>
             </NavigationMenu.Item>
-            <NavigationMenu.Item>
-              <Separator.Root
-                orientation="vertical"
-                className={styles["separator"]}
-              />
-            </NavigationMenu.Item>
+            <Separator.Root
+              orientation="vertical"
+              className={styles["separator"]}
+            />
+
             <NavigationMenu.Item>
               <Link href="/" passHref>
-                <NavigationMenu.Link>
+                <NavigationMenu.Link aria-label="Search">
                   <SearchIcon />
                 </NavigationMenu.Link>
               </Link>

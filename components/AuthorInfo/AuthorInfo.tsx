@@ -6,7 +6,7 @@ type Props = {};
 
 const AuthorInfo = (props: Props) => {
   return (
-    <div>
+    <div className={styles.authorInfo}>
       <Avatar.Root className={styles.avatar__root}>
         <Avatar.Image
           src="images/Nicolas Cage.png"
@@ -17,6 +17,8 @@ const AuthorInfo = (props: Props) => {
           NC
         </Avatar.Fallback>
       </Avatar.Root>
+      <span className={styles.authorName}>By Author Name</span>
+      <span className={styles.authorProfession}>Profession</span>
     </div>
   );
 };

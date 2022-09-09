@@ -1,3 +1,6 @@
 .icon {
   fill: white;
 }
+.icon--black {
+  fill: #495057;
+}

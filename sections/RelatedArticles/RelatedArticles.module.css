@@ -1,0 +1,14 @@
+.relatedArticles {
+  padding: 100px 70px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: rgba(229, 229, 229, 0.3);
+}
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #495057;
+}

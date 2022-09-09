@@ -1,6 +1,9 @@
 import { Separator } from "@radix-ui/react-separator";
+import { triggerAsyncId } from "async_hooks";
 import React from "react";
 import AuthorInfo from "../../components/AuthorInfo";
+import Tag from "../../components/Tag";
+import SocialBar from "../SocialBar";
 import styles from "./ArticleBody.module.css";
 
 type Props = {};
@@ -20,16 +23,22 @@ const ArticleBody = (props: Props) => {
   return (
     <div className={styles["grid"]}>
       <div className={styles["sideInfo"]}>
-        {article.createdAt}
-        <Separator />
-        {article.readingTime}
+        <time>{article.createdAt}</time>
+        <Separator className={styles["sideInfo__separator"]} />
+        <span>{article.readingTime}</span>
       </div>
       <div className={styles["text"]} dangerouslySetInnerHTML={article.text} />
-      <div className={styles["tags"]}>Tags</div>
+      <div className={styles["tags"]}>
+        {article.tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
+      </div>
       <Separator className={styles["separator"]} />
       <div className={styles["author"]}>
         <AuthorInfo />
-        <div className="socialMedia"></div>
+        <div className="socialMedia">
+          <SocialBar />
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,12 @@
+.authorInfo {
+  display: grid;
+  grid-template-areas:
+    "avatar name"
+    "avatar profession";
+  grid-template-columns: min-content auto;
+  gap: 0 1rem;
+}
+
 .avatar__root {
   display: inline-flex;
   align-items: center;
@@ -9,6 +18,7 @@
   width: 45px;
   height: 45px;
   border-radius: 100%;
+  grid-area: avatar;
 }
 .avatar__image {
   width: 100%;
@@ -27,4 +37,20 @@
   font-size: 15px;
   line-height: 1;
   font-weight: 500;
+}
+
+.authorName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #495057;
+}
+
+.authorProfession {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #495057;
 }
