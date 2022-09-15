@@ -1,16 +1,19 @@
 import ArticleBody from "@compositions/ArticleBody";
 import ArticleHeader from "@compositions/ArticleHeader";
+import { ArticleModel } from "models/ArticleModel";
 import React from "react";
 
 import styles from "./Article.module.css";
 
-type Props = {};
+type Props = {
+  article: ArticleModel;
+};
 
-const Article = (props: Props) => {
+const Article = ({ article }: Props) => {
   return (
     <article className={styles["article"]}>
-      <ArticleHeader />
-      <ArticleBody />
+      <ArticleHeader article={article} />
+      <ArticleBody article={article} />
     </article>
   );
 };

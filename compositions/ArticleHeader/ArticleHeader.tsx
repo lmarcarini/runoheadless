@@ -1,30 +1,22 @@
 import BackgroundImage from "@components/BackgroundImage";
 import Badge from "@components/Badge";
+import { ArticleModel } from "models/ArticleModel";
 import React from "react";
 import styles from "./ArticleHeader.module.css";
 
-type Props = {};
-
-const article = {
-  type: "FASHION",
-  title: "Richird Norton photorealistic rendering as real photos",
-  description:
-    "Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.",
-  createdAt: new Date(),
-  author: "Jennifer Lawrence",
-  readingTime: "4 minutes",
+type Props = {
+  article: ArticleModel;
 };
 
-const ArticleHeader = (props: Props) => {
+const ArticleHeader = ({ article }: Props) => {
+  const { image, badge, title, description, author } = article;
   return (
     <section className={styles["articleHeader"]}>
-      <BackgroundImage src="images/Rectangle 9.png" />
-      <Badge>{article.type}</Badge>
-      <h1 className={styles["articleHeader__title"]}>{article.title}</h1>
-      <p className={styles["articleHeader__description"]}>
-        {article.description}
-      </p>
-      <p className={styles["articleHeader__author"]}>By {article.author}</p>
+      <BackgroundImage src={image} />
+      <Badge>{badge}</Badge>
+      <h1 className={styles["articleHeader__title"]}>{title}</h1>
+      <p className={styles["articleHeader__description"]}>{description}</p>
+      <p className={styles["articleHeader__author"]}>By {author.name}</p>
     </section>
   );
 };

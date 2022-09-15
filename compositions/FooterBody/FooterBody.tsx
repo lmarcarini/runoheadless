@@ -10,18 +10,32 @@ const FooterBody = (props: Props) => {
       <div className={styles.col}>
         <h2 className={styles.sectionTitle}>Contact the Publisher</h2>
         <ul className={styles.infoList}>
-          <li>mike@runo.com</li>
-          <li>+944 450 904 505</li>
+          <li>
+            <a href="mailto:mike@runo.com">mike@runo.com</a>
+          </li>
+          <li>
+            <a href="tel:+944450904505">+944 450 904 505</a>
+          </li>
         </ul>
       </div>
       <div className={styles.col}>
         <h2 className={styles.sectionTitle}>Explorate</h2>
         <ul className={styles.infoList}>
-          <li>About</li>
-          <li>Partners</li>
-          <li>Job Opportunities</li>
-          <li>Advertise</li>
-          <li>Membership</li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="">Partners</a>
+          </li>
+          <li>
+            <a href="">Job Opportunities</a>
+          </li>
+          <li>
+            <a href="">Advertise</a>
+          </li>
+          <li>
+            <a href="">Membership</a>
+          </li>
         </ul>
       </div>
       <div className={styles.col}>
