@@ -4,6 +4,7 @@ export type ArticleCompactModel = {
   title: string;
   image: string;
   badge: string;
+  id: string;
 };
 
 export type ArticleModel = {

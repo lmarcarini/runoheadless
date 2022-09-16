@@ -1,0 +1,7 @@
+.body {
+  display: grid;
+  grid-auto-columns: minmax(1vw, 1440px);
+  min-height: 1vh;
+  justify-content: center;
+  position: relative;
+}
