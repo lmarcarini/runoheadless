@@ -1,15 +1,24 @@
 .grid {
   display: grid;
   grid-template-areas:
-    "sideinfo text"
-    "sideinfo  tags"
-    "sideinfo  separator"
-    "sideinfo  author";
-  grid-template-columns: max-content minmax(auto, 860px);
+    "sideinfo"
+    "text"
+    "tags"
+    "separator"
+    "author";
   gap: 50px;
-  max-width: 1440px;
-  padding: 100px 70px;
-  margin: 0 auto;
+  padding: 100px 35px;
+}
+@media screen and (min-width: 770px) {
+  .grid {
+    grid-template-areas:
+      "sideinfo text"
+      "sideinfo  tags"
+      "sideinfo  separator"
+      "sideinfo  author";
+    grid-template-columns: max-content minmax(auto, 860px);
+    padding: 100px 70px;
+  }
 }
 .sideInfo {
   display: grid;
@@ -19,9 +28,15 @@
   gap: 7px;
 }
 .sideInfo__separator {
+  display: none;
   width: 35px;
   height: 1px;
   background-color: #c4c4c4;
+}
+@media screen and (min-width: 770px) {
+  .sideInfo__separator {
+    display: block;
+  }
 }
 .text {
   grid-area: text;

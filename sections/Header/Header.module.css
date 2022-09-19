@@ -1,11 +1,5 @@
-.header {
-  width: 100%;
-  min-height: 80px;
+.wrapper {
   background: rgba(0, 0, 0, 0.2);
   padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  min-height: 80px;
 }

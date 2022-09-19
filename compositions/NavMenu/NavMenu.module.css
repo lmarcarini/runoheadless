@@ -1,5 +1,5 @@
 .navmenu__list {
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
@@ -22,4 +22,9 @@
   background-color: white;
   width: 1px;
   height: 20px;
+}
+@media screen and (min-width: 770px) {
+  .navmenu__list {
+    display: flex;
+  }
 }

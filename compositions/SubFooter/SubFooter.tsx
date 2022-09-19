@@ -7,7 +7,7 @@ const SubFooter = (props: Props) => {
   return (
     <div className={styles.subFooter}>
       <span>2021 | RUNO Publisher Studio</span>
-      <a>Subscribe Now</a>
+      <a href="">Subscribe Now</a>
     </div>
   );
 };

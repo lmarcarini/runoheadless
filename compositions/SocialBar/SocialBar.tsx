@@ -11,22 +11,23 @@ import styles from "./SocialBar.module.css";
 
 type Props = {
   youtube?: string;
+  white?: boolean;
 };
 
-const SocialBar = ({ youtube }: Props) => {
+const SocialBar = ({ youtube, white }: Props) => {
   return (
     <ul className={styles.socialBar}>
       <li>
         <Link href={"/"}>
           <a role="link" aria-label="facebook">
-            <FacebookIcon color="black" />
+            <FacebookIcon color={white ? "white" : "black"} />
           </a>
         </Link>
       </li>
       <li>
         <Link href={"/"}>
           <a role="link" aria-label="twitter">
-            <TwitterIcon color="black" />
+            <TwitterIcon color={white ? "white" : "black"} />
           </a>
         </Link>
       </li>
@@ -34,7 +35,7 @@ const SocialBar = ({ youtube }: Props) => {
         <li>
           <Link href={"/"}>
             <a role="link" aria-label="youtube">
-              <YoutubeIcon color="black" />
+              <YoutubeIcon color={white ? "white" : "black"} />
             </a>
           </Link>
         </li>
@@ -42,14 +43,14 @@ const SocialBar = ({ youtube }: Props) => {
       <li>
         <Link href={"/"}>
           <a role="link" aria-label="pinterest">
-            <PinterestIcon color="black" />
+            <PinterestIcon color={white ? "white" : "black"} />
           </a>
         </Link>
       </li>
       <li>
         <Link href={"/"}>
           <a role="link" aria-label="behance">
-            <BehanceIcon color="black" />
+            <BehanceIcon color={white ? "white" : "black"} />
           </a>
         </Link>
       </li>

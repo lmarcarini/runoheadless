@@ -6,9 +6,9 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className={styles["header"]}>
+    <div className={styles["wrapper"]}>
       <NavMenu />
-    </header>
+    </div>
   );
 };
 

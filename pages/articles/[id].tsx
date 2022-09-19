@@ -9,6 +9,7 @@ import { fetchArticle, fetchArticlesPaths } from "service/aem";
 import styles from "styles/Home.module.css";
 
 const ArticlePage: NextPage<{ article: ArticleModel }> = ({ article }) => {
+  console.log(article.title);
   return (
     <div className={styles.container}>
       <Head>

@@ -46,7 +46,7 @@ const FooterBody = (props: Props) => {
       </div>
       <div className={styles.col}>
         <h2 className={styles.sectionTitle}>Connections</h2>
-        <SocialBar />
+        <SocialBar white />
       </div>
     </div>
   );

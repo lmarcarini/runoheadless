@@ -5,3 +5,13 @@
   justify-content: center;
   position: relative;
 }
+.main {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+.header {
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 1;
+}

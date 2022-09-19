@@ -10,9 +10,13 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <div className={styles.body}>
-      <Header />
+      <header className={styles.header}>
+        <Header />
+      </header>
       <main className={styles.main}>{children}</main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

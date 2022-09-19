@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Icons.module.css";
 
 type Props = {
-  color?: "black";
+  color?: "black" | "white";
 };
 
 const FacebookIcon = ({ color }: Props) => {
