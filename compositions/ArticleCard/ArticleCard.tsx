@@ -13,6 +13,9 @@ const ArticleCard = ({ article }: Props) => {
   const { createdAt, badge, title, description, image, id } = article;
   return (
     <div className={styles.card}>
+      <div className={styles.image}>
+        <BackgroundImage src={image} />
+      </div>
       <div className={styles.card__header}>
         <Badge>{badge}</Badge>
       </div>
@@ -23,7 +26,6 @@ const ArticleCard = ({ article }: Props) => {
         </Link>
         <p className={styles.card__description}>{description}</p>
       </div>
-      <BackgroundImage src={image} />
     </div>
   );
 };

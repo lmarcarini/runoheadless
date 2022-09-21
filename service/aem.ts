@@ -1,5 +1,4 @@
-import Article from "@sections/Article";
-import { ArticleModel } from "models/ArticleModel";
+import { ArticleModel, ArticleCompactModel } from "models/ArticleModel";
 
 const encodeValue = (valueToString: string) =>
   Buffer.from(valueToString).toString("base64");
@@ -77,6 +76,108 @@ export const fetchArticlesPaths = async () => {
     return data.data.articleList.items.map(({ _path }: { _path: string }) => {
       return { params: { id: _path.split("/").pop() } };
     });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchArticleList = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:4502/graphql/execute.json/Runo/articlelist",
+      { method: "GET", headers: myHeaders }
+    );
+    const data = await response.json();
+    const articles: ArticleCompactModel[] = data.data.articleList.items.map(
+      (item: any) => {
+        return {
+          createdAt: item.createdAt.replaceAll("-", "."),
+          description: item.description,
+          title: item.title,
+          image: "http://localhost:4502/" + item.bannerIllustration._path,
+          badge: "Fashion",
+          id: item._path.split("/").pop(),
+          readingTime: item.estimatedTimeToRead,
+        };
+      }
+    );
+    return articles;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchEditorPicks = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:4502/graphql/execute.json/Runo/getEditorPicks",
+      { method: "GET", headers: myHeaders }
+    );
+    const data = await response.json();
+    // console.log(data.data.articlesselectionByPath.item);
+    const articles: ArticleCompactModel[] =
+      data.data.articlesselectionByPath.item.articles.map((item: any) => {
+        return {
+          createdAt: item.createdAt.replaceAll("-", "."),
+          description: item.description,
+          title: item.title,
+          image: "http://localhost:4502/" + item.bannerIllustration._path,
+          badge: item.tags[0].split("/").pop(),
+          id: item._path.split("/").pop(),
+          readingTime: item.estimatedTimeToRead,
+        };
+      });
+    return articles;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchFeatured = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:4502/graphql/execute.json/Runo/getFeatured",
+      { method: "GET", headers: myHeaders }
+    );
+    const data = await response.json();
+    const articles: ArticleCompactModel[] =
+      data.data.articlesselectionByPath.item.articles.map((item: any) => {
+        return {
+          createdAt: item.createdAt.replaceAll("-", "."),
+          description: item.description,
+          title: item.title,
+          image: "http://localhost:4502/" + item.bannerIllustration._path,
+          badge: item.tags[0].split("/").pop(),
+          id: item._path.split("/").pop(),
+          readingTime: item.estimatedTimeToRead,
+        };
+      });
+    return articles[0];
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchRecentArticles = async () => {
+  try {
+    const response = await fetch(
+      "http://localhost:4502/graphql/execute.json/Runo/getRecentArticles",
+      { method: "GET", headers: myHeaders }
+    );
+    const data = await response.json();
+    const articles: ArticleCompactModel[] =
+      data.data.articlesselectionByPath.item.articles.map((item: any) => {
+        return {
+          createdAt: item.createdAt.replaceAll("-", "."),
+          description: item.description,
+          title: item.title,
+          image: "http://localhost:4502/" + item.bannerIllustration._path,
+          badge: item.tags[0].split("/").pop(),
+          id: item._path.split("/").pop(),
+          readingTime: item.estimatedTimeToRead,
+        };
+      });
+    return articles[0];
   } catch (err) {
     console.log(err);
   }

@@ -1,0 +1,19 @@
+.mobileNavMenu {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 770px) {
+  .mobileNavMenu {
+    display: none;
+  }
+}
+.expandMenuButton {
+  height: 24px;
+  width: 24px;
+  background: none;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}

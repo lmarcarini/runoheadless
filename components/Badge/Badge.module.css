@@ -10,4 +10,5 @@
   margin: 0;
   color: white;
   text-transform: uppercase;
+  width: max-content;
 }

@@ -1,12 +1,16 @@
 .relatedArticles {
-  padding: 100px 70px;
+  padding: 100px 2rem;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   background-color: rgba(229, 229, 229, 0.3);
   display: flex;
   gap: 50px;
   flex-direction: column;
+}
+@media screen and (min-width: 770px) {
+  .relatedArticles {
+    padding: 100px 70px;
+  }
 }
 .title {
   font-style: normal;
@@ -14,6 +18,9 @@
   font-size: 18px;
   line-height: 25px;
   color: #495057;
+}
+.title--large {
+  font-size: 36px;
 }
 .list {
   display: flex;

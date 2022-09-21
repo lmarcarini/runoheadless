@@ -39,3 +39,39 @@
   line-height: 20px;
   color: #e5e5e5;
 }
+@container (width < 300px) {
+  .card {
+    width: 200px;
+    padding: 0;
+    position: relative;
+    justify-content: start;
+  }
+  .card__date {
+    color: #495057;
+    width: 200px;
+  }
+  .card__title {
+    color: #495057;
+    width: 200px;
+  }
+  .card__description {
+    color: #495057;
+    width: 200px;
+  }
+  .image {
+    width: 200px;
+    padding-bottom: 80%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .card__body {
+    justify-items: start;
+    padding-top: 0.5rem;
+  }
+  .card__header {
+    position: absolute;
+    right: 0;
+    translate: -5px 5px;
+  }
+}

@@ -32,7 +32,7 @@ export async function getStaticPaths() {
   const paths = await fetchArticlesPaths();
   return {
     paths,
-    fallback: false, // can also be true or 'blocking'
+    fallback: false,
   };
 }
 

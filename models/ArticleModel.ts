@@ -5,6 +5,7 @@ export type ArticleCompactModel = {
   image: string;
   badge: string;
   id: string;
+  readingTime?: string;
 };
 
 export type ArticleModel = {
