@@ -1,9 +1,11 @@
 .body {
   display: grid;
+  position: relative;
   grid-auto-columns: minmax(1vw, 1440px);
   min-height: 1vh;
   justify-content: center;
   position: relative;
+  isolation: isolate;
 }
 .main {
   grid-column: 1 / -1;
