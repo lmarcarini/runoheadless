@@ -1,5 +1,11 @@
 import { ArticleModel, ArticleCompactModel } from "models/ArticleModel";
 
+type RelatedArticle = ArticleCompactModel & {
+  _path: string;
+  bannerIllustration: { _path: string };
+  author: { name: string; profession: string; portrait: { _path: string } };
+};
+
 const encodeValue = (valueToString: string) =>
   Buffer.from(valueToString).toString("base64");
 
@@ -36,17 +42,7 @@ export const fetchArticle = async (articlePath: string) => {
           data.data.articleByPath.item.author.portrait._path,
       },
       relatedArticles: data.data.articleByPath.item.relatedArticles.map(
-        (article: {
-          title: string;
-          description: string;
-          _path: string;
-          bannerIllustration: { _path: string };
-          author: {
-            name: string;
-            profession: string;
-            portrait: { _path: string };
-          };
-        }) => {
+        (article: RelatedArticle) => {
           return {
             ...article,
             id: article._path.split("/").pop(),
@@ -114,7 +110,6 @@ export const fetchEditorPicks = async () => {
       { method: "GET", headers: myHeaders }
     );
     const data = await response.json();
-    // console.log(data.data.articlesselectionByPath.item);
     const articles: ArticleCompactModel[] =
       data.data.articlesselectionByPath.item.articles.map((item: any) => {
         return {
